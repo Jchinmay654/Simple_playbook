@@ -1,0 +1,18 @@
+---
+- name: Creating user with variable
+  hosts: all
+  tasks:
+    - name: create users
+      user: 
+           name: "{{ my_user }}"
+           state: present
+
+    - name: install package
+      yum:
+           name: "{{ my_pkg }}"
+           state: present
+    - name: create a group
+      group:
+           name: "{{ my_group }}"
+           state: present
+

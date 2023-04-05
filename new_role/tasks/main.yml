@@ -1,0 +1,15 @@
+---
+# tasks file for new_role
+- yum: 
+        name: "{{ web_pkg }}"
+        state: present
+
+- template:
+        src: "{{ doc_root }}"
+        dest: /var/www/html
+  notify: restart httpd
+
+- copy:
+        src: test
+        dest: /test.txt
+

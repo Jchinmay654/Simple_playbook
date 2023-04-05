@@ -1,0 +1,3 @@
+---
+# vars file for new_role
+web_pkg: mariadb

@@ -1,0 +1,7 @@
+---
+# handlers file for new_role
+- name: restart mariadb
+  service: 
+            name: mariadb.service
+            state: started
+            enabled: yes

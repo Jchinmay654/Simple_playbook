@@ -1,0 +1,8 @@
+---
+ - name: creating a webserver using role
+   hosts: all
+   vars:
+    - web_pkg: bind , nginx
+    - start_server: nginx
+   roles:
+    - roles

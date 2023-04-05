@@ -1,0 +1,5 @@
+---
+- name: creating nginx server in one click using role
+  hosts: all
+  roles: 
+     - alvistack.httpd 

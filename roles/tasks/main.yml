@@ -1,0 +1,18 @@
+---
+- name:
+  yum: 
+          name: "{{ web_pkg }}" 
+          state: present
+ 
+- name: starting webserver
+  service: 
+          name: "{{ start_server }}"
+          state: started
+          enabled: yes
+
+- name: create index.html
+  template: 
+          src: index.html.j2
+          dest: /var/www/html
+         
+

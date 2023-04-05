@@ -1,0 +1,6 @@
+---
+- name: creating a webserver role
+  hosts: all
+  roles: 
+         - new_role
+

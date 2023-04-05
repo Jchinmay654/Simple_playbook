@@ -1,0 +1,20 @@
+---
+ - name: Creating User
+   hosts: all
+   tasks:
+          - name: create india user
+            user:
+                  name: india
+                  state: present
+                  shell: /sbin/nologin
+
+          - name: install httpd
+            yum:
+                  name: httpd 
+                  state: present
+          - name: start service
+            service: 
+                  name: httpd
+                  state: started
+
+
